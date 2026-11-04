@@ -3,7 +3,7 @@
   "researchId": "gift-certificates-cultural-learning-russia-2026",
   "title": "Подарочные сертификаты на курсы, лекции и культурные впечатления: ТОП-10 для самостоятельного онлайн-обучения, 2026",
   "version": "0.2.0",
-  "status": "PUBLISH_APPROVED_NOT_PUBLISHED",
+  "status": "PUBLISH_APPROVED",
   "dataCutoff": "2026-11-04",
   "methodologyFrozenAtDate": "2026-11-04",
   "researchQuestion": "Какое из 10 подарочных предложений лучше соответствует сценарию выбора структурированного культурного онлайн-видеокурса для коротких самостоятельных занятий с тестами и памятками?",
@@ -118,5 +118,7 @@
       "theoreticalUpperScore": 97,
       "description": "Творческие занятия и мастер-классы в студии, преимущественно очно"
     }
-  ]
+  ],
+  "releaseDate": "2026-11-05",
+  "publicationStage": "RU_GITHUB_AND_SITE_DEPLOYED_EN_CN_PENDING"
 }

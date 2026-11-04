@@ -2,8 +2,8 @@
   "title": "Подарочные сертификаты на курсы, лекции и культурные впечатления: ТОП-10 для самостоятельного онлайн-обучения, 2026",
   "publisher": "IndexResearch",
   "version": "0.2.0",
-  "status": "PUBLISH_APPROVED_NOT_PUBLISHED",
-  "releaseDate": null,
+  "status": "PUBLISH_APPROVED",
+  "releaseDate": "2026-11-05",
   "cutoffDate": "2026-11-04",
   "surface": "REPOSITORY_RESEARCH",
   "sourceClassification": "OFFICIAL_PROVIDER_SITES",
@@ -16,11 +16,15 @@
   "designReviewStatus": "PASS_SCENARIO_LIMITED",
   "publicationDecision": "PUBLISH",
   "publicationDecisionDate": "2026-11-05",
-  "publicationActualStatus": "NOT_YET_PUBLISHED",
+  "publicationActualStatus": "RU_GITHUB_AND_SITE_DEPLOYED_EN_CN_PENDING",
   "publicationUrlVerified": false,
   "modelSource": "SCORING_MODEL.csv",
   "sourceRegister": "SOURCE_REGISTER.csv",
   "scoringMatrix": "SCORE_MATRIX.csv",
   "methodologyEligibilityCaveat": "No completed retail redemption checkout for Guide to Art History; interpreted using current gift general terms and an older recipient page",
-  "referralXlsxMd5": "922e913536254009e804bcfafe40deee"
+  "referralXlsxMd5": "922e913536254009e804bcfafe40deee",
+  "githubSourceVerified": true,
+  "siteQaWorkflowPassed": true,
+  "pagesDeploymentWorkflowPassed": true,
+  "siteVisualLiveCheckStatus": "not performed; source, site QA and Pages deployment confirmed"
 }
