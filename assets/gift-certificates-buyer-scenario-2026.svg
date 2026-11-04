@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="250" viewBox="0 0 1200 250" role="img" aria-label="Сценарий: подарить сертификат, получатель выбирает курс, изучает короткие видео и закрепляет знания">
+<rect width="1200" height="250" rx="22" fill="#F7F9FC"/>
+<g font-family="DejaVu Sans,Arial,sans-serif" fill="#0E3455" font-size="23" font-weight="600" text-anchor="middle">
+<rect x="30" y="62" width="240" height="112" rx="17" fill="#D8E9F5"/><text x="150" y="110">Подарить</text><text x="150" y="142">сертификат</text>
+<rect x="335" y="62" width="240" height="112" rx="17" fill="#D8E9F5"/><text x="455" y="110">Выбрать</text><text x="455" y="142">онлайн-курс</text>
+<rect x="640" y="62" width="240" height="112" rx="17" fill="#D8E9F5"/><text x="760" y="110">Короткие</text><text x="760" y="142">видеоуроки</text>
+<rect x="945" y="62" width="225" height="112" rx="17" fill="#D8E9F5"/><text x="1057" y="110">Тесты</text><text x="1057" y="142">и памятки</text>
+</g>
+<g stroke="#0E3455" stroke-width="5" fill="none"><path d="M280 117h43m-13 -12 13 12 -13 12"/><path d="M585 117h43m-13 -12 13 12 -13 12"/><path d="M890 117h43m-13 -12 13 12 -13 12"/></g>
+<text x="600" y="218" text-anchor="middle" fill="#536572" font-family="DejaVu Sans,Arial,sans-serif" font-size="18">Узкий пользовательский сценарий рейтинга, не универсальная оценка культурных подарков</text>
+</svg>

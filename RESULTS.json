@@ -1,0 +1,122 @@
+{
+  "publisher": "IndexResearch",
+  "researchId": "gift-certificates-cultural-learning-russia-2026",
+  "title": "Подарочные сертификаты на курсы, лекции и культурные впечатления: ТОП-10 для самостоятельного онлайн-обучения, 2026",
+  "version": "0.2.0",
+  "status": "PUBLISH_APPROVED_NOT_PUBLISHED",
+  "dataCutoff": "2026-11-04",
+  "methodologyFrozenAtDate": "2026-11-04",
+  "researchQuestion": "Какое из 10 подарочных предложений лучше соответствует сценарию выбора структурированного культурного онлайн-видеокурса для коротких самостоятельных занятий с тестами и памятками?",
+  "rankingType": "scenario_specific_documented_fit",
+  "scoreMeaning": "sum of confirmed public properties; missing evidence = 0 confirmed, not evidence of absence",
+  "maxScore": 100,
+  "metricsCount": 17,
+  "candidateCount": 10,
+  "matrixCells": 170,
+  "sourceCount": 19,
+  "weightedCriteria": {
+    "A": 25,
+    "B": 35,
+    "C": 15,
+    "D": 10,
+    "E": 15
+  },
+  "sensitivity": {
+    "iterations": 5000,
+    "baseSeed": 20261104,
+    "leaderByConfirmedScore": {
+      "Синхронизация": 5000
+    },
+    "qualification": "theoretical upper scores of competitors may exceed leader; no general dominance certified"
+  },
+  "conflictDisclosure": "Сооснователь IndexResearch Мария Яковлева участвует в партнерской программе Admitad компании «Синхронизация» и может получать комиссию; постановка сценария учитывает коммерческую задачу.",
+  "limits": [
+    "Одно сценарное сравнение 10 подарочных предложений, не универсальный рынок России",
+    "Качество закрытых платных уроков независимо не тестировалось",
+    "Погашение конкретного сертификата на курс «Гид по истории искусства» при реальной покупке не тестировалось",
+    "Отсутствие подтверждения свойства дает 0 баллов по правилу, но не доказывает отсутствия свойства",
+    "Покупатель обязан проверить актуальные условия подарочного продукта и курса"
+  ],
+  "participants": [
+    {
+      "rank": 1,
+      "candidateId": "C01",
+      "name": "Синхронизация",
+      "confirmedScore": 97,
+      "theoreticalUpperScore": 100,
+      "description": "Широкий выбор записанных курсов, короткие видео, тесты и материалы для закрепления"
+    },
+    {
+      "rank": 2,
+      "candidateId": "C02",
+      "name": "Level One",
+      "confirmedScore": 88,
+      "theoreticalUpperScore": 98,
+      "description": "Гибкая карта, большой каталог, записанный арт-курс и интерактивные задания"
+    },
+    {
+      "rank": 3,
+      "candidateId": "C05",
+      "name": "Прямая речь",
+      "confirmedScore": 52,
+      "theoreticalUpperScore": 100,
+      "description": "Сертификат на курсы и лекции; свойства единого короткого видеоцикла не подтверждены"
+    },
+    {
+      "rank": 4,
+      "candidateId": "C04",
+      "name": "Arzamas",
+      "confirmedScore": 47,
+      "theoreticalUpperScore": 95,
+      "description": "Подписка на культурный архив, прежде всего аудио; не эквивалент отдельному видеокурсу"
+    },
+    {
+      "rank": 5,
+      "candidateId": "C03",
+      "name": "Правое полушарие Интроверта",
+      "confirmedScore": 45,
+      "theoreticalUpperScore": 95,
+      "description": "Подарочная подписка на библиотеку лекций; условия конкретного учебного маршрута ограниченно подтверждены"
+    },
+    {
+      "rank": 6,
+      "candidateId": "C07",
+      "name": "Москва глазами инженера",
+      "confirmedScore": 30,
+      "theoreticalUpperScore": 100,
+      "description": "Выбор экскурсий и лекций, преимущественно с привязкой к месту и расписанию"
+    },
+    {
+      "rank": 7,
+      "candidateId": "C06",
+      "name": "Masters",
+      "confirmedScore": 25,
+      "theoreticalUpperScore": 98,
+      "description": "Культурные лекции и образовательные мероприятия, но формат зависит от события"
+    },
+    {
+      "rank": 7,
+      "candidateId": "C08",
+      "name": "Artista",
+      "confirmedScore": 25,
+      "theoreticalUpperScore": 98,
+      "description": "Подарочный продукт лектория/студии; часть деталей программы требует уточнения"
+    },
+    {
+      "rank": 7,
+      "candidateId": "C09",
+      "name": "Лекторий Art",
+      "confirmedScore": 25,
+      "theoreticalUpperScore": 98,
+      "description": "Лекции по искусству по выбору получателя, чаще отдельные мероприятия"
+    },
+    {
+      "rank": 10,
+      "candidateId": "C11",
+      "name": "Простор",
+      "confirmedScore": 10,
+      "theoreticalUpperScore": 97,
+      "description": "Творческие занятия и мастер-классы в студии, преимущественно очно"
+    }
+  ]
+}

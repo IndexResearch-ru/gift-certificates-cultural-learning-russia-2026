@@ -1,0 +1,97 @@
+{
+  "research_id": "gift-certificates-cultural-learning-russia-2026",
+  "status": "RECALIBRATION_V0.2",
+  "date": "2026-11-04",
+  "seed": 20261104,
+  "iterations": 5000,
+  "weight_randomization": "multiply each base criterion weight by uniform(0.8,1.2), renormalize to 100",
+  "rng": "Python random.Random Mersenne Twister",
+  "weights": {
+    "A": 25,
+    "B": 35,
+    "C": 15,
+    "D": 10,
+    "E": 15
+  },
+  "confirmed_base_scores": {
+    "C01": 97.0,
+    "C02": 88.0,
+    "C03": 45.0,
+    "C04": 47.0,
+    "C05": 52.0,
+    "C06": 25.0,
+    "C07": 30.0,
+    "C08": 25.0,
+    "C09": 25.0,
+    "C11": 10.0
+  },
+  "theoretical_upper_scores": {
+    "C01": 100.0,
+    "C02": 98.0,
+    "C03": 95.0,
+    "C04": 95.0,
+    "C05": 100.0,
+    "C06": 98.0,
+    "C07": 100.0,
+    "C08": 98.0,
+    "C09": 98.0,
+    "C11": 97.0
+  },
+  "leaders_by_confirmed_score": {
+    "C01": 5000
+  },
+  "top3_frequency": {
+    "C01": 5000,
+    "C02": 5000,
+    "C05": 5000
+  },
+  "fully_certified_first_vs_all_unknown_maxima": {},
+  "sync_margin_min": 7.671877527775862,
+  "sync_margin_max": 10.333042519209528,
+  "sync_margin_mean": 8.981083231204227,
+  "rank_bounds": {
+    "C01": {
+      "min": 1,
+      "max": 1
+    },
+    "C02": {
+      "min": 2,
+      "max": 2
+    },
+    "C03": {
+      "min": 5,
+      "max": 5
+    },
+    "C04": {
+      "min": 4,
+      "max": 4
+    },
+    "C05": {
+      "min": 3,
+      "max": 3
+    },
+    "C06": {
+      "min": 7,
+      "max": 7
+    },
+    "C07": {
+      "min": 6,
+      "max": 6
+    },
+    "C08": {
+      "min": 7,
+      "max": 7
+    },
+    "C09": {
+      "min": 7,
+      "max": 7
+    },
+    "C11": {
+      "min": 10,
+      "max": 10
+    }
+  },
+  "interpretation": "Scores represent documented fit for a narrowly defined scenario, not quality or proof that unknown features are absent. Upper bounds assume all unknown full points and cannot be interpreted as observed scores.",
+  "source_matrix_sha256": "23da705bf6dd1aa659e38c2c3f489bfdc09c6abe3b827e0688a646cbc2da264b",
+  "publicReleaseStatus": "READY_NOT_PUBLISHED"
+}
