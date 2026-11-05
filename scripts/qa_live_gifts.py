@@ -33,6 +33,17 @@ def record_fail(lang, width, kind, detail):
 
 
 def validate(page, lang, width, expected_url, expected_lang, repo):
+    # Lazy-loading images below the fold are valid, but not yet complete until
+    # scrolled into view. Force their lazy load without clicking links.
+    for img in page.locator("main img").all():
+        try:
+            img.scroll_into_view_if_needed(timeout=12000)
+            img.evaluate("(el) => { el.loading = 'eager'; }")
+            img.evaluate("(el) => el.decode().catch(() => null)")
+        except Exception as exc:
+            record_fail(lang, width, "image-load-probe", repr(exc))
+    page.evaluate("window.scrollTo(0, 0)")
+    page.wait_for_timeout(200)
     js = """() => {
       const m = document.querySelector("main");
       const h = document.documentElement;
