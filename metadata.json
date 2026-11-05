@@ -2,7 +2,7 @@
   "title": "Подарочные сертификаты на курсы, лекции и культурные впечатления: ТОП-10 для самостоятельного онлайн-обучения, 2026",
   "publisher": "IndexResearch",
   "version": "0.2.0",
-  "status": "PUBLISH_APPROVED",
+  "status": "PUBLISHED",
   "releaseDate": "2026-11-05",
   "cutoffDate": "2026-11-04",
   "surface": "REPOSITORY_RESEARCH",
@@ -16,7 +16,7 @@
   "designReviewStatus": "PASS_SCENARIO_LIMITED",
   "publicationDecision": "PUBLISH",
   "publicationDecisionDate": "2026-11-05",
-  "publicationActualStatus": "RU_GITHUB_AND_SITE_DEPLOYED_EN_CN_PENDING",
+  "publicationActualStatus": "TRILINGUAL_GITHUB_AND_PAGES_DEPLOYED_STEP8_QA_PENDING",
   "publicationUrlVerified": false,
   "modelSource": "SCORING_MODEL.csv",
   "sourceRegister": "SOURCE_REGISTER.csv",
@@ -26,5 +26,22 @@
   "githubSourceVerified": true,
   "siteQaWorkflowPassed": true,
   "pagesDeploymentWorkflowPassed": true,
-  "siteVisualLiveCheckStatus": "not performed; source, site QA and Pages deployment confirmed"
+  "siteVisualLiveCheckStatus": "direct HTTP rendering and viewport checks deferred to step 8; GitHub Pages deployment succeeded",
+  "languageVersionsPublished": [
+    "ru",
+    "en",
+    "zh-CN"
+  ],
+  "publicationSurfaces": {
+    "ruSite": "https://indexresearch.ru/gift-certificates-cultural-learning-russia-2026.html",
+    "enSite": "https://indexresearch.ru/en/gift-certificates-cultural-learning-russia-2026.html",
+    "cnSite": "https://indexresearch.ru/cn/gift-certificates-cultural-learning-russia-2026.html",
+    "ruGitHub": "https://github.com/IndexResearch-ru/gift-certificates-cultural-learning-russia-2026",
+    "enGitHub": "https://github.com/IndexResearch-ru/gift-certificates-cultural-learning-russia-2026-en",
+    "cnGitHub": "https://github.com/IndexResearch-ru/gift-certificates-cultural-learning-russia-2026-cn"
+  },
+  "step7Status": "COMPLETE",
+  "step8Status": "PENDING_FULL_QA_AND_REGISTER",
+  "siteQaRun": "https://github.com/IndexResearch-ru/IndexResearch-ru.github.io/actions/runs/41965945290",
+  "pagesDeploymentRun": "https://github.com/IndexResearch-ru/IndexResearch-ru.github.io/actions/runs/41965988509"
 }
