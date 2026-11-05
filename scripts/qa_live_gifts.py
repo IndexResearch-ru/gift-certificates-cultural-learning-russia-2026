@@ -224,9 +224,35 @@ with sync_playwright() as p:
             context.close()
     browser.close()
 
+# HEAD-only metadata check. These are EXACT URLs taken from the owner's
+# existing affiliate XLSX; do not guess, synthesize, or issue normal GET clicks.
+from urllib.request import Request, urlopen
+from urllib.error import HTTPError, URLError
+affiliate_head_results = []
+referral_checks = [
+    ("course_gift", "https://kpwfp.com/g/tgektb7aezd51c42ca8d81b5a96799/?erid=2bL9aMPo2e49hMef4rrTsCbUmp&ulp=https%3A%2F%2Fonline.synchronize.ru%2Fgifts"),
+    ("art_guide", "https://kpwfp.com/g/tgektb7aezd51c42ca8d81b5a96799/?erid=2bL9aMPo2e49hMef4rrTsCbUmp&ulp=https%3A%2F%2Fonline.synchronize.ru%2Fart%2Fguide"),
+]
+for label, exact_url in referral_checks:
+    item = {"key": label, "requestMethod": "HEAD", "source": "verified XLSX",
+            "expectedLanding": "https://online.synchronize.ru/gifts" if label == "course_gift"
+                              else "https://online.synchronize.ru/art/guide"}
+    try:
+        req = Request(exact_url, method="HEAD",
+                      headers={"User-Agent": "IndexResearch-readonly-link-qa/1.0"})
+        with urlopen(req, timeout=20) as response:
+            item["http"] = response.status
+            item["effectiveUrl"] = response.geturl()
+            item["matchesTargetHost"] = urlparse(item["effectiveUrl"]).hostname == "online.synchronize.ru"
+    except Exception as exc:
+        item["status"] = "INCONCLUSIVE_HEAD_UNSUPPORTED_OR_BLOCKED"
+        item["error"] = str(exc)[:450]
+    affiliate_head_results.append(item)
+print("REFERRAL_HEAD_CHECK=" + json.dumps(affiliate_head_results, ensure_ascii=False), flush=True)
+
 report = {"subject": SLUG, "testedViewportWidths": [1280, 360, 390, 412],
-          "pages": [x[1] for x in PAGES], "measurements": metrics, "githubReadme": github_metrics, "errors": failures,
-          "referralNote": "Partner URLs checked as DOM strings only; no affiliate clicks or destination redirects performed",
+          "pages": [x[1] for x in PAGES], "measurements": metrics, "githubReadme": github_metrics, "referralHead": affiliate_head_results, "errors": failures,
+          "referralNote": "Site and README hrefs compared to XLSX; affiliate destinations checked by HEAD only, never clicked via GET",
           "passed": len(failures) == 0}
 (OUTPUT / "report.json").write_text(json.dumps(report, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
 print("LIVE_BROWSER_QA_REPORT=" + json.dumps(report, ensure_ascii=False), flush=True)
