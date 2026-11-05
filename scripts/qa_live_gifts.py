@@ -26,6 +26,7 @@ OUTPUT = Path("qa_live_gifts_artifacts")
 OUTPUT.mkdir(exist_ok=True)
 failures = []
 metrics = []
+github_metrics = []
 
 
 def record_fail(lang, width, kind, detail):
@@ -153,10 +154,78 @@ with sync_playwright() as p:
             except Exception as exc:
                 record_fail(lang, width, "exception", repr(exc))
         context.close()
+
+    # GitHub renders Markdown into article.markdown-body. Verify the public
+    # rendered presentation, rather than relying only on the raw README source.
+    github_repos = [
+        ("ru", "https://github.com/IndexResearch-ru/" + SLUG),
+        ("en", "https://github.com/IndexResearch-ru/" + SLUG + "-en"),
+        ("cn", "https://github.com/IndexResearch-ru/" + SLUG + "-cn"),
+    ]
+    for lang, url in github_repos:
+        context = browser.new_context(viewport={"width": 1280, "height": 820}, locale="en-US")
+        page = context.new_page()
+        try:
+            response = page.goto(url, wait_until="domcontentloaded", timeout=45000)
+            http = response.status if response else None
+            page.wait_for_timeout(1200)
+            elem = page.locator("article.markdown-body")
+            if elem.count() == 0:
+                record_fail(lang, "github", "readme-not-rendered", f"HTTP {http}: article.markdown-body absent")
+                continue
+            for img in elem.locator("img").all():
+                try:
+                    img.scroll_into_view_if_needed(timeout=14000)
+                    img.evaluate("(el) => { el.loading = 'eager'; }")
+                    img.evaluate("(el) => el.decode().catch(() => null)")
+                except Exception as exc:
+                    record_fail(lang, "github", "image-probe", repr(exc))
+            page.evaluate("window.scrollTo(0, 0)")
+            page.wait_for_timeout(250)
+            vals = elem.evaluate("""el => ({
+                text: el.innerText,
+                tables: el.querySelectorAll("table").length,
+                images: Array.from(el.querySelectorAll("img")).map(i => ({
+                    src: i.currentSrc || i.src, loaded: i.complete && i.naturalWidth > 0
+                })),
+                affiliate: Array.from(el.querySelectorAll('a[href*="kpwfp.com"]')).length,
+                links: Array.from(el.querySelectorAll('a[href]')).map(a => a.href)
+            })""")
+            if http != 200:
+                record_fail(lang, "github", "http", http)
+            if vals["tables"] < 2:
+                record_fail(lang, "github", "tables", vals["tables"])
+            if "97/100" not in vals["text"] or "88" not in vals["text"]:
+                record_fail(lang, "github", "scores", "ranking score text not found")
+            if "Admitad" not in vals["text"]:
+                record_fail(lang, "github", "disclosure", "Admitad not rendered")
+            if len(vals["images"]) < 2:
+                record_fail(lang, "github", "images", len(vals["images"]))
+            missing = [v["src"] for v in vals["images"] if not v["loaded"]]
+            if missing:
+                record_fail(lang, "github", "broken-images", missing)
+            if vals["affiliate"] < 2:
+                record_fail(lang, "github", "referral-links", vals["affiliate"])
+            github_metrics.append({"lang": lang, "http": http, "url": url,
+                "scoreVisible": "97/100" in vals["text"],
+                "tables": vals["tables"], "images": len(vals["images"]),
+                "brokenImages": len(missing), "affiliateAnchors": vals["affiliate"]})
+            for width in (1280, 390):
+                page.set_viewport_size({"width": width, "height": 820})
+                page.wait_for_timeout(200)
+                page.screenshot(path=str(OUTPUT / f"github-{lang}-{width}.png"),
+                                full_page=True, animations="disabled", timeout=60000)
+            print(f"GITHUB_RENDER {lang}: HTTP={http}, tables={vals['tables']}, "
+                  f"images={len(vals['images'])}, broken={len(missing)}, "
+                  f"referral={vals['affiliate']}", flush=True)
+        except Exception as exc:
+            record_fail(lang, "github", "exception", repr(exc))
+        finally:
+            context.close()
     browser.close()
 
 report = {"subject": SLUG, "testedViewportWidths": [1280, 360, 390, 412],
-          "pages": [x[1] for x in PAGES], "measurements": metrics, "errors": failures,
+          "pages": [x[1] for x in PAGES], "measurements": metrics, "githubReadme": github_metrics, "errors": failures,
           "referralNote": "Partner URLs checked as DOM strings only; no affiliate clicks or destination redirects performed",
           "passed": len(failures) == 0}
 (OUTPUT / "report.json").write_text(json.dumps(report, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
