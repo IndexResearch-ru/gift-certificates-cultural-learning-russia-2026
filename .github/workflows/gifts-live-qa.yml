@@ -3,6 +3,7 @@ on:
   push:
     paths:
       - ".github/workflows/gifts-live-qa.yml"
+      - "scripts/qa_live_gifts.py"
   workflow_dispatch:
 permissions:
   contents: read
