@@ -16,7 +16,7 @@
   "designReviewStatus": "PASS_SCENARIO_LIMITED",
   "publicationDecision": "PUBLISH",
   "publicationDecisionDate": "2026-11-05",
-  "publicationActualStatus": "TRILINGUAL_GITHUB_AND_PAGES_DEPLOYED_STEP8_QA_PENDING",
+  "publicationActualStatus": "TRILINGUAL_GITHUB_PAGES_PUBLISHED_SOURCE_CI_REGISTRY_RECONCILED",
   "publicationUrlVerified": false,
   "modelSource": "SCORING_MODEL.csv",
   "sourceRegister": "SOURCE_REGISTER.csv",
@@ -41,7 +41,9 @@
     "cnGitHub": "https://github.com/IndexResearch-ru/gift-certificates-cultural-learning-russia-2026-cn"
   },
   "step7Status": "COMPLETE",
-  "step8Status": "PENDING_FULL_QA_AND_REGISTER",
+  "step8Status": "COMPLETE_SOURCE_CI_REGISTRY_V6_2",
   "siteQaRun": "https://github.com/IndexResearch-ru/IndexResearch-ru.github.io/actions/runs/41965945290",
-  "pagesDeploymentRun": "https://github.com/IndexResearch-ru/IndexResearch-ru.github.io/actions/runs/41965988509"
+  "pagesDeploymentRun": "https://github.com/IndexResearch-ru/IndexResearch-ru.github.io/actions/runs/41965988509",
+  "step8RegistryCheckedAt": "2026-11-05",
+  "step8AuditMethod": "GitHub main source readback, existing site CI/Pages evidence, live GAEO registry; browser and final redirections not claimed"
 }
