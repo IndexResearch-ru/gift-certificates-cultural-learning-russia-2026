@@ -17,7 +17,7 @@
   "publicationDecision": "PUBLISH",
   "publicationDecisionDate": "2026-11-05",
   "publicationActualStatus": "TRILINGUAL_GITHUB_PAGES_PUBLISHED_SOURCE_CI_REGISTRY_RECONCILED",
-  "publicationUrlVerified": false,
+  "publicationUrlVerified": true,
   "modelSource": "SCORING_MODEL.csv",
   "sourceRegister": "SOURCE_REGISTER.csv",
   "scoringMatrix": "SCORE_MATRIX.csv",
@@ -26,7 +26,7 @@
   "githubSourceVerified": true,
   "siteQaWorkflowPassed": true,
   "pagesDeploymentWorkflowPassed": true,
-  "siteVisualLiveCheckStatus": "direct HTTP rendering and viewport checks deferred to step 8; GitHub Pages deployment succeeded",
+  "siteVisualLiveCheckStatus": "Additional nonmandatory live checks documented in GAEO registry for six surfaces; source/CI/registry step 8 complete under v6.2",
   "languageVersionsPublished": [
     "ru",
     "en",
@@ -45,5 +45,6 @@
   "siteQaRun": "https://github.com/IndexResearch-ru/IndexResearch-ru.github.io/actions/runs/41965945290",
   "pagesDeploymentRun": "https://github.com/IndexResearch-ru/IndexResearch-ru.github.io/actions/runs/41965988509",
   "step8RegistryCheckedAt": "2026-11-05",
-  "step8AuditMethod": "GitHub main source readback, existing site CI/Pages evidence, live GAEO registry; browser and final redirections not claimed"
+  "step8AuditMethod": "GitHub main source readback, existing site CI/Pages evidence, live GAEO registry; browser and final redirections not claimed",
+  "publicationUrlVerificationSource": "GAEO live registry entries INDEX-T057-GITHUB/SITE RU EN CN, 2026-11-05 (recorded HTTP 200 and viewport checks by separate task; not re-run in this v6.2 audit)"
 }
