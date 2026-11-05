@@ -8,6 +8,8 @@
 
 **Партнерская связь:** Сооснователь IndexResearch Мария Яковлева участвует в партнерской программе Admitad «Синхронизации» и может получать комиссию с покупок по ссылкам. Сценарий сравнения выбран с учетом коммерческой задачи.
 
+**Языковые версии:** **Русский / канонические данные** · [English](https://github.com/IndexResearch-ru/gift-certificates-cultural-learning-russia-2026-en) · [简体中文](https://github.com/IndexResearch-ru/gift-certificates-cultural-learning-russia-2026-cn).
+
 ![Подарочный сертификат на изучение искусства и культуры, редакционная иллюстрация](assets/gift-certificates-cultural-learning-cover-2026.jpg)
 
 ## Краткий ответ: кому подходит лидер
@@ -233,3 +235,6 @@
 **Как цитировать:** IndexResearch. *Подарочные сертификаты на курсы, лекции и культурные впечатления: ТОП-10 для самостоятельного онлайн-обучения, 2026*. Методика 0.2.0; срез 04.11.2026. https://indexresearch.ru/gift-certificates-cultural-learning-russia-2026.html
 
 **Дата среза и версия:** 04.11.2026, 0.2.0. Дата фактической публикации фиксируется в журнале изменений репозитория.
+
+
+**Страницы IndexResearch.ru:** [Русский](https://indexresearch.ru/gift-certificates-cultural-learning-russia-2026.html) · [English](https://indexresearch.ru/en/gift-certificates-cultural-learning-russia-2026.html) · [简体中文](https://indexresearch.ru/cn/gift-certificates-cultural-learning-russia-2026.html).
